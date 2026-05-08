@@ -27,7 +27,7 @@ exports.register = async (req, res) => {
       const user = result[0];
 
       if (user.deleted_at !== null) {
-        // reactivation 🔥
+        // reactivation 
         db.query(
           "UPDATE users SET password = ?, deleted_at = NULL WHERE email = ?",
           [hashedPassword, email],
