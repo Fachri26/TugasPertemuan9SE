@@ -24,6 +24,7 @@ exports.verifyToken = (req, res, next) => {
 
     next();
   });
+};
 
   exports.isAdmin = (req, res, next) => {
 
@@ -35,6 +36,4 @@ exports.verifyToken = (req, res, next) => {
   }
 
   next();
-};
-
 };
