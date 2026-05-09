@@ -10,9 +10,13 @@ const {
   createProxyMiddleware
 } = require('http-proxy-middleware');
 
+const helmet = require('helmet');
+
 const app = express();
 
 app.use(morgan('dev'));
+
+app.use(helmet());
 
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000,
@@ -36,6 +40,12 @@ app.use(
     changeOrigin: true
   })
 );
+
+app.get('/health', (req, res) => {
+  res.json({
+    gateway: 'running'
+  });
+});
 
 const PORT = process.env.PORT;
 

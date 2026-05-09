@@ -5,9 +5,10 @@ exports.createProduct = (req, res) => {
 
   const { name, price } = req.body;
 
-  if (!name || !price) {
+  if (!name || typeof price !== 'number' || price <= 0) {
     return res.status(400).json({
-      error: 'All fields required'
+      success: false,
+      error: 'Invalid input: Name is required and price must be a positive number'
     });
   }
 

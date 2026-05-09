@@ -9,12 +9,13 @@ const {
 } = require('../controllers/orderController');
 
 const {
-  verifyToken
+  verifyToken,
+  isAdmin
 } = require('../middleware/authMiddleware');
 
 //products
 
-router.post('/products', verifyToken, createProduct);
+router.post('/products', verifyToken, isAdmin, createProduct);
 
 router.get('/products', getProducts);
 
