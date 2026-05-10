@@ -1,7 +1,7 @@
 module.exports = {
   apps : [
     {
-      name: "auth-service",
+      name: "2410511096-auth-service",
       cwd: "./auth-service", 
       script: "./src/app.js", 
       env: {
@@ -9,7 +9,7 @@ module.exports = {
       }
     },
     {
-      name: "order-service",
+      name: "2410511096-order-service",
       cwd: "./order-service", 
       script: "./src/app.js",
       env: {
@@ -17,7 +17,7 @@ module.exports = {
       }
     },
     {
-      name: "consumer-service",
+      name: "2410511096-consumer-service",
       cwd: "./consumer", 
       script: "./src/consumer.js",
       env: {
@@ -25,7 +25,7 @@ module.exports = {
       }
     },
     {
-      name: "api-gateway",
+      name: "2410511096-api-gateway",
       cwd: "./api-gateway", 
       script: "./src/app.js",
       env: {
